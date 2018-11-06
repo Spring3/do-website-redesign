@@ -1,0 +1,22 @@
+/* Navbar */
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 30px 20px;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.navbar-end {
+  justify-content: flex-end;
+}
+
+.navbar-x {
+  flex-direction: row;
+}
+
+.navbar-y {
+  flex-direction: column;
+}

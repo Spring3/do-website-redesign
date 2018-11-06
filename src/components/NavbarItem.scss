@@ -1,0 +1,24 @@
+@import '../consts.scss';
+
+/* Navbar item */
+
+.navbar-item {
+  margin: 0px 10px;
+}
+
+.navbar-item-text:hover { 
+  cursor: pointer;
+  color: $color-main;
+}
+
+.navbar-item-text > svg {
+  vertical-align: middle;
+}
+
+.navbar-item-grow {
+  flex-grow: 1;
+}
+
+.navbar-item-active {
+
+}

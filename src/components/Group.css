@@ -1,0 +1,16 @@
+.group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.group-x {
+  flex-direction: row;
+}
+
+.group-y {
+  flex-direction: column;
+}
+
+.group-center {
+  justify-content: center;
+}
