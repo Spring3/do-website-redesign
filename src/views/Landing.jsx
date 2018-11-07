@@ -35,9 +35,9 @@ const CompanyOptions = [
 class Landing extends PureComponent {
   render() {
     return (
-      <Navbar className="navbar-x navbar-end">
+      <Navbar className="navbar-x">
         <NavbarItem type="image" src={logo} width={150} grow={true}/>
-        <Group>
+        <Group selectable={false}>
           <NavbarItem text="Solutions" options={SolutionsOptions} />
           <NavbarItem text="Benefits" options={BenefitsOptions} />
           <NavbarItem text="References" options={ReferencesOptions} />

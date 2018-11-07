@@ -1,12 +1,12 @@
 // @flow
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import './Group.css';
 
-class Group extends Component {
+class Group extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -22,7 +22,7 @@ class Group extends Component {
   }
 
   render() {
-    const { children, className } = this.props;
+    const { children, className, selectable } = this.props;
     const classname = classnames('group', className);
 
     return (
@@ -30,12 +30,15 @@ class Group extends Component {
         className={classname}
       >
         { 
-          React.Children.map(children, (child, i) =>
-            React.cloneElement(child, {
-              index: i,
-              onClick: this.clickHandler
-            })
+          selectable ? (
+            React.Children.map(children, (child, i) =>
+              React.cloneElement(child, {
+                index: i,
+                onClick: this.clickHandler
+              })
+            )
           )
+          : children
         }
       </div>
     );
@@ -44,7 +47,12 @@ class Group extends Component {
 
 Group.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node
-}
+  children: PropTypes.node,
+  selectable: PropTypes.bool
+};
+
+Group.defaultProps = {
+  selectable: false
+};
 
 export default Group;

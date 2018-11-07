@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-const Image = props => {
-  const { src, alt, width, height } = props;
-  return (
-    <img
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-    />
-  );
+class Image extends PureComponent {
+  render() {
+    const { src, alt, width, height } = this.props;
+    return (
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+      />
+    );
+  }
 }
 
 Image.propTypes = {

@@ -1,36 +1,36 @@
 // @flow
 
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './NavbarItem.scss';
 
 import NavbarItemText from './NavbarItemText.jsx';
 import NavbarItemImage from './NavbarItemImage.jsx';
 
-const NavbarItem = props => {
-  const { active, text, onClick, index, type, grow, src, width, height, alt, options } = props;
+class NavbarItem extends PureComponent {
+  render () {
+    const { active, text, index, type, src, width, height, alt, options } = this.props;
 
-  switch(type.toLowerCase()) {
-    case 'image':
-      return (
-        <NavbarItemImage
-          grow={grow}
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-        />
-      );
-    default:
-      return (
-        <NavbarItemText
-          text={text}
-          onClick={onClick}
-          index={index}
-          active={active}
-          options={options}
-        />
-      );
+    switch(type.toLowerCase()) {
+      case 'image':
+        return (
+          <NavbarItemImage
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
+          />
+        );
+      default:
+        return (
+          <NavbarItemText
+            text={text}
+            index={index}
+            active={active}
+            options={options}
+          />
+        );
+    }
   }
 }
 
@@ -44,7 +44,6 @@ NavbarItem.propTypes = {
     'text'
   ]).isRequired,
   active: PropTypes.bool,
-  grow: PropTypes.bool,
   text: PropTypes.string,
   src: PropTypes.string,
   alt: PropTypes.string,
@@ -56,8 +55,7 @@ NavbarItem.propTypes = {
     PropTypes.string,
     PropTypes.number
   ]),
-  options: PropTypes.array,
-  onClick: PropTypes.func
+  options: PropTypes.array
 };
 
 NavbarItem.defaultProps = {

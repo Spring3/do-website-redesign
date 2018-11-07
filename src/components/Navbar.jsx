@@ -1,22 +1,24 @@
 // @flow
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './Navbar.css';
 
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const Navbar = props => {
-  const { children, className } = props;
-  const classname = classnames('navbar', className);
+class Navbar extends PureComponent {
+  render () {
+    const { children, className } = this.props;
+    const classname = classnames('navbar', className);
 
-  return (
-    <ul
-      className={classname}
-    >
-      { children }
-    </ul>
-  );
+    return (
+      <ul
+        className={classname}
+      >
+        { children }
+      </ul>
+    );
+  }
 }
 
 Navbar.propTypes = {
