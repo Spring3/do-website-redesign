@@ -2,13 +2,22 @@
 
 /* Navbar item */
 
+.navbar-item-wrapper {
+  position: relative;
+  margin-right: 15px;
+}
+
 .navbar-item {
-  margin: 0px 10px;
+  font-size: $font-size;
 }
 
 .navbar-item-text:hover { 
   cursor: pointer;
   color: $color-main;
+}
+
+.navbar-item-text {
+  text-align: center;
 }
 
 .navbar-item-text > svg {
@@ -22,3 +31,26 @@
 .navbar-item-active {
 
 }
+
+/* dropdown */
+
+.navbar-item-dropdown {
+  position: absolute;
+  min-width: 150px;
+  list-style-type: none;
+  font-size: $font-size;
+  padding: 5px 10px 10px 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  left: -55px;
+  background: white;
+  box-shadow: 0px 2px 5px 1px rgba(200, 200, 200, .6);
+}
+
+.navbar-item-dropdown-option {
+  padding: 5px 0px;
+  font-size: $font-size;
+  text-align: center;
+}
+
+

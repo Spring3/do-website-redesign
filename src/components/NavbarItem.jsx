@@ -8,7 +8,7 @@ import NavbarItemText from './NavbarItemText.jsx';
 import NavbarItemImage from './NavbarItemImage.jsx';
 
 const NavbarItem = props => {
-  const { active, text, onClick, index, type, grow, src, width, height, alt } = props;
+  const { active, text, onClick, index, type, grow, src, width, height, alt, options } = props;
 
   switch(type.toLowerCase()) {
     case 'image':
@@ -28,6 +28,7 @@ const NavbarItem = props => {
           onClick={onClick}
           index={index}
           active={active}
+          options={options}
         />
       );
   }
@@ -55,6 +56,7 @@ NavbarItem.propTypes = {
     PropTypes.string,
     PropTypes.number
   ]),
+  options: PropTypes.array,
   onClick: PropTypes.func
 };
 
