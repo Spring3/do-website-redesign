@@ -1,10 +1,14 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import logo from '../img/logo_dial-once_180.png';
+import iphonex from '../img/iphonex.png';
 
 import Navbar from '../components/Navbar';
 import NavbarItem from '../components/NavbarItem';
 import Group from '../components/Group';
+import VideoFrame from '../components/VideoFrame';
+
+import './Landing.css';
 
 /* move it further to some separate place (store?) */
 const SolutionsOptions = [
@@ -34,8 +38,8 @@ const CompanyOptions = [
 
 class Landing extends PureComponent {
   render() {
-    return (
-      <Navbar className="navbar-x">
+    return [
+      <Navbar key={0} className="navbar-x">
         <NavbarItem type="image" src={logo} width={150} grow={true}/>
         <Group selectable={false}>
           <NavbarItem text="Solutions" options={SolutionsOptions} />
@@ -43,8 +47,20 @@ class Landing extends PureComponent {
           <NavbarItem text="References" options={ReferencesOptions} />
           <NavbarItem text="Company" options={CompanyOptions} />
         </Group>
-      </Navbar>
-    );
+      </Navbar>,
+      <main key={1}>
+        <section className="showcase">
+          <VideoFrame
+            img={iphonex}
+          />
+          <Group
+            className="group-y"
+            selectable={true}>
+            <a />
+          </Group>
+        </section>
+      </main>
+    ];
   }
 }
 
