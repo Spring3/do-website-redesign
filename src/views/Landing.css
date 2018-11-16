@@ -1,8 +1,8 @@
 .showcase {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   max-height: 100vh; /* max 1 screen size  */
-  height: 100%;
-  position: relative;
-  top: 50px;
+  height: 100%; 
+  margin-top: 50px;
+  flex-wrap: wrap;
 }

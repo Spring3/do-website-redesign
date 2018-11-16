@@ -7,7 +7,7 @@ import './VideoFrame.scss';
 const imageStyleTemplate = {
   backgroundSize: 'contain',
   backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center'
+  backgroundPosition: 'top center'
 };
 
 class VideoFrame extends PureComponent {

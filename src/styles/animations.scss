@@ -1,0 +1,27 @@
+@keyframes slideIn {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromTop {
+  0% {
+    height: 0px;
+  }
+  70% {
+    opacity: .2;
+    height: initial / 2;
+  }
+  100% {
+    height: initial;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  100% { opacity: 1; }
+}

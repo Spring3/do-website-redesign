@@ -1,0 +1,63 @@
+@import '../consts.scss';
+@import '../styles/animations.scss';
+
+.slide {
+  animation: slideIn 0.6s ease-out forwards;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0px 0px 0px;
+  opacity: 0;
+}
+
+.slide-header {
+  font-size: 32px;
+  font-weight: bold;
+  background: white;
+  transition: background 1s ease;
+  display: inline-block;
+  margin: 0px;
+}
+
+.slide-header:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom,transparent 0,transparent 60%,$color-highlight 60%,$color-highlight 100%);
+}
+
+.slide-header-active {
+  background: linear-gradient(to bottom,transparent 0,transparent 60%,$color-highlight 60%,$color-highlight 100%);
+}
+
+.slide-dropdown {
+  padding: 0px;
+  margin-top: 20px;
+  list-style-type: none;
+  svg {
+    vertical-align: middle
+  }
+}
+
+.slide-dropdown-column {
+  column-count: 2;
+  column-gap: 0px;
+}
+
+.slide-dropdown > li {
+  margin: 0px 0px 10px 0px;
+  opacity: 0;
+  font-weight: 500;
+}
+
+.slide-active > .slide-dropdown-wrapper > .slide-dropdown > li {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.slide-dropdown-wrapper {
+  transition: height .3s ease-in;
+  height: 0px;
+}
+
+.slide-active > .slide-dropdown-wrapper {
+  height: 160px;
+}

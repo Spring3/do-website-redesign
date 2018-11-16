@@ -7,6 +7,20 @@ import Navbar from '../components/Navbar';
 import NavbarItem from '../components/NavbarItem';
 import Group from '../components/Group';
 import VideoFrame from '../components/VideoFrame';
+import Slider from '../components/Slider';
+import Slide from '../components/Slide';
+
+import {
+  AndroidIcon,
+  AppleIosIcon,
+  XamarinOutlineIcon,
+  CordovaIcon,
+  WebIcon,
+  FacebookMessengerIcon,
+  EmailIcon,
+  QrcodeIcon,
+  PhoneInTalkIcon
+} from 'mdi-react';
 
 import './Landing.css';
 
@@ -53,11 +67,40 @@ class Landing extends PureComponent {
           <VideoFrame
             img={iphonex}
           />
-          <Group
-            className="group-y"
-            selectable={true}>
-            <a />
-          </Group>
+          <Slider>
+            <Slide
+              header="Visual IVR"
+            >
+              <span>Personalized and fully customizable</span>
+              <span>User satisfaction rate measurement</span>
+              <span>Follows your company's working hours</span>
+              <span>Contextualizes the call</span>
+              <span>Plug & Play</span>
+            </Slide>
+            <Slide
+              header="Multiple information channels"
+              column={true}
+            >
+              <span><PhoneInTalkIcon /> - Phone call</span>
+              <span><AndroidIcon /> - Android</span>
+              <span><AppleIosIcon /> - iOS</span>
+              <span><XamarinOutlineIcon /> - Xamarin</span>
+              <span><CordovaIcon /> - Cordova</span>
+              <span><WebIcon /> - Website</span>
+              <span><FacebookMessengerIcon /> - Facebook Messenger</span>
+              <span><EmailIcon /> - Email</span>
+              <span><QrcodeIcon /> - QR code</span>
+            </Slide>
+            <Slide
+              header="Analytics & Reporting"
+            >
+              <span>Real-time analytics</span>
+              <span>Access to Dashboard</span>
+              <span>On demand (de)activation</span>
+              <span>User interaction tracking</span>
+              <span>Consultation about the main KPIs</span>
+            </Slide>
+          </Slider>
         </section>
       </main>
     ];
