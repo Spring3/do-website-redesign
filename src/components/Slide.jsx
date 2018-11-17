@@ -32,7 +32,7 @@ class Slide extends PureComponent {
         <div className="slide-dropdown-wrapper">
           <ul className={slideDropDownClass}>
             { React.Children.map(children, (child, i) =>
-                <li style={{ animationDelay: `${i * 0.2}s` }}>{child}</li>
+                <li style={{ animationDelay: `${i * 0.1}s` }}>{child}</li>
               )
             }
           </ul>

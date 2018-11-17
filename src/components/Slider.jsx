@@ -9,15 +9,44 @@ class Slider extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      activeIndex: -1
+      activeIndex: -1,
+      manual: false
+    };
+  }
+
+  componentDidMount() {
+    const { children, speed, delay } = this.props;
+    setTimeout(() => this.setState({
+      activeIndex: 0
+    }), delay);
+    const itemsLength = children.length;
+    if (itemsLength > 0) {
+      this.interval = setInterval(() => {
+        const { activeIndex } = this.state;
+        this.setState({
+          activeIndex: activeIndex >= itemsLength - 1
+            ? 0
+            : activeIndex + 1
+        });
+      }, speed);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.interval) {
+      clearInterval(this.interval);
     }
   }
 
   activate = (i : Number) => {
     if (this.state.index !== i) {
       this.setState({
-        activeIndex: i
+        activeIndex: i,
+        manual: true
       });
+      if (this.interval) {
+        clearInterval(this.interval);
+      }
     }
   }
 
@@ -41,7 +70,14 @@ class Slider extends PureComponent {
 }
 
 Slider.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  speed: PropTypes.number,
+  delay: PropTypes.number
+};
+
+Slider.defaultProps = {
+  speed: 5000,
+  delay: 1500
 };
 
 export default Slider;
