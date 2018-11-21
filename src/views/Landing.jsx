@@ -1,12 +1,15 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import logo from '../img/logo_dial-once_180.png';
-import iphonex from '../img/iphonex.png';
+import iphone6 from '../img/iphone_6_gold.png';
+import dashboardChart from '../img/dashboard-chart.png';
+import dashboardKpis from '../img/dashboard-kpis.png';
 
 import Navbar from '../components/Navbar';
 import NavbarItem from '../components/NavbarItem';
 import Group from '../components/Group';
 import VideoFrame from '../components/VideoFrame';
+import Video from '../components/Video';
 import Slider from '../components/Slider';
 import Slide from '../components/Slide';
 
@@ -65,8 +68,14 @@ class Landing extends PureComponent {
       <main key={1}>
         <section className="showcase">
           <VideoFrame
-            img={iphonex}
-          />
+            img={iphone6}
+          >
+            <Video
+              src='do-demo.mp4'
+              autoplay={true}
+              loop={true}
+            />
+          </VideoFrame>
           <Slider>
             <Slide
               header="Visual IVR"

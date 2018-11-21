@@ -6,3 +6,15 @@
   margin-top: 50px;
   flex-wrap: wrap;
 }
+
+.video-frame {
+  min-width: 250px;
+  height: 550px;
+  position: relative;
+  text-align: center;
+}
+
+.showcase > .video-frame > video {
+  width: 220px;
+  margin-top: 59px;
+}

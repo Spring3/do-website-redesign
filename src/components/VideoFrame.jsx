@@ -1,6 +1,5 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Video from './Video.jsx';
 
 import './VideoFrame.scss';
 
@@ -10,23 +9,27 @@ const imageStyleTemplate = {
   backgroundPosition: 'top center'
 };
 
-class VideoFrame extends PureComponent {
+class VideoFrame extends Component {
   render() {
-    const { img } = this.props;
+    const { img, children } = this.props;
     const urlToImg = `url(${img})`;
     return (
       <div
         className="video-frame"
         style={{ backgroundImage: urlToImg, ...imageStyleTemplate}}
       >
-        <Video />
+        { children }
       </div>
     );
   }
 };
 
 VideoFrame.propTypes = {
-  img: PropTypes.string.isRequired
+  img: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.element
+  ])
 }
 
 export default VideoFrame;
