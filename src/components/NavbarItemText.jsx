@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import './NavbarItem.scss';
-import { ChevronDownIcon } from 'mdi-react';
+import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 
 class NavbarItemText extends PureComponent {
   constructor(props) {
@@ -22,6 +22,7 @@ class NavbarItemText extends PureComponent {
   }
 
   renderPlainText(classname) {
+    const { text } = this.props;
     return (
       <div
         className="navbar-item-wrapper"
@@ -29,6 +30,7 @@ class NavbarItemText extends PureComponent {
         <li
           className={classname}
         >
+          { text }
         </li>
       </div>
     );

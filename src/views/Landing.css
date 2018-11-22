@@ -1,20 +1,36 @@
+section {
+  margin-top: 100px;
+}
+
 .showcase {
   display: flex;
   justify-content: space-evenly;
   max-height: 100vh; /* max 1 screen size  */
   height: 100%; 
-  margin-top: 50px;
   flex-wrap: wrap;
 }
 
 .video-frame {
-  min-width: 250px;
+  min-width: 299px;
   height: 550px;
   position: relative;
   text-align: center;
 }
 
 .showcase > .video-frame > video {
-  width: 220px;
-  margin-top: 59px;
+  width: 237px;
+  margin-top: 64px;
+}
+
+.plates-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 50px auto 0px auto;
+}
+
+section > h1 {
+  text-align: center;
+  font-size: 32px;
 }

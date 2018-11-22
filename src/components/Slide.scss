@@ -1,4 +1,4 @@
-@import '../consts.scss';
+@import '../styles/consts.scss';
 @import '../styles/animations.scss';
 
 .slide {
@@ -14,7 +14,7 @@
 .slide-header {
   font-size: 32px;
   font-weight: bold;
-  background: white;
+  background: transparent;
   transition: background 1s ease;
   display: inline-block;
   margin: 0px;

@@ -12,28 +12,31 @@ import VideoFrame from '../components/VideoFrame';
 import Video from '../components/Video';
 import Slider from '../components/Slider';
 import Slide from '../components/Slide';
+import Plate from '../components/Plate';
 
-import {
-  AndroidIcon,
-  AppleIosIcon,
-  XamarinOutlineIcon,
-  CordovaIcon,
-  WebIcon,
-  FacebookMessengerIcon,
-  EmailIcon,
-  QrcodeIcon,
-  PhoneInTalkIcon
-} from 'mdi-react';
+import AndroidIcon from 'mdi-react/AndroidIcon';
+import AppleIosIcon from 'mdi-react/AppleIosIcon';
+import XamarinOutlineIcon from 'mdi-react/XamarinOutlineIcon';
+import CordovaIcon from 'mdi-react/CordovaIcon';
+import WebIcon from 'mdi-react/WebIcon';
+import FacebookMessengerIcon from 'mdi-react/FacebookMessengerIcon';
+import EmailIcon from 'mdi-react/EmailIcon';
+import QrcodeIcon from 'mdi-react/QrcodeIcon';
+import PhoneInTalkIcon from 'mdi-react/PhoneInTalkIcon';
+import DiamondOutlineIcon from 'mdi-react/DiamondOutlineIcon';
+import ControllerClassicOutlineIcon from 'mdi-react/ControllerClassicOutlineIcon';
+import CellphoneLinkIcon from 'mdi-react/CellphoneLinkIcon';
+import CoinIcon from 'mdi-react/CoinIcon';
+import AccountSearchOutlineIcon from 'mdi-react/AccountSearchOutlineIcon';
+import AccountGroupOutlineIcon from 'mdi-react/AccountGroupOutlineIcon';
+import MonitorDashboardIcon from 'mdi-react/MonitorDashboardIcon';
+import ChartBarStackedIcon from 'mdi-react/ChartBarStackedIcon';
+import AccountCardDetailsIcon from 'mdi-react/AccountCardDetailsIcon';
+import ToggleSwitchOutlineIcon from 'mdi-react/ToggleSwitchOutlineIcon';
 
 import './Landing.css';
 
 /* move it further to some separate place (store?) */
-const SolutionsOptions = [
-  { name: 'Visual IVR', location: '/solutions/visual-ivr' },
-  { name: 'Omnichannel Platform', location: '/solutions/omnichannel-platform' },
-  { name: 'Analytics and Reporting', location: '/solutions/analytics-and-reporting' }
-];
-
 const BenefitsOptions = [
   { name: 'Customer Experience', location: '/benefits/customer-experience' },
   { name: 'Digital Transformation', location: '/benefits/digital-transformation' },
@@ -59,7 +62,7 @@ class Landing extends PureComponent {
       <Navbar key={0} className="navbar-x">
         <NavbarItem type="image" src={logo} width={150} grow={true}/>
         <Group selectable={false}>
-          <NavbarItem text="Solutions" options={SolutionsOptions} />
+          <NavbarItem text="Solutions" />
           <NavbarItem text="Benefits" options={BenefitsOptions} />
           <NavbarItem text="References" options={ReferencesOptions} />
           <NavbarItem text="Company" options={CompanyOptions} />
@@ -110,6 +113,61 @@ class Landing extends PureComponent {
               <span>Consultation about the main KPIs</span>
             </Slide>
           </Slider>
+        </section>
+        <section>
+          <h1>What you get with Dial-Once</h1>
+          <div className="plates-menu">
+            <Plate
+              header="Personalized solution"
+              icon={<DiamondOutlineIcon size={30}/>}
+              iconClass="diamond"
+            />
+            <Plate
+              header="Plug & Play"
+              icon={<ControllerClassicOutlineIcon size={25}/>}
+              iconClass="controller"
+            />
+            <Plate
+              header="Multi device support"
+              icon={<CellphoneLinkIcon size={25}/>}
+              iconClass="cellphone"
+            />
+            <Plate
+              header="Reduced amount of calls"
+              icon={<CoinIcon size={25}/>}
+              iconClass="calls"
+            />
+            <Plate
+              header="24/7 Self service"
+              icon={<AccountSearchOutlineIcon size={25}/>}
+              iconClass="selfservice"
+            />
+            <Plate
+              header="Instant user feedback"
+              icon={<AccountGroupOutlineIcon size={25}/>}
+              iconClass="feedback"
+            />
+            <Plate
+              header="Access to dashboard"
+              icon={<MonitorDashboardIcon size={25}/>}
+              iconClass="dashboard"
+            />
+            <Plate
+              header="Run-time analytics"
+              icon={<ChartBarStackedIcon size={25}/>}
+              iconClass="analytics"
+            />
+            <Plate
+              header="Contextualized call"
+              icon={<AccountCardDetailsIcon size={25}/>}
+              iconClass="context"
+            />
+            <Plate
+              header="On demand (de)activation"
+              icon={<ToggleSwitchOutlineIcon size={25}/>}
+              iconClass="toggle"
+            />
+          </div>
         </section>
       </main>
     ];
