@@ -12,6 +12,7 @@
   flex-direction: column;  
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
 }
 
 .plate:hover {
@@ -20,7 +21,34 @@
   background: $color-highlight-black;
 }
 
-.plate:hover > div > svg {
-  animation: pulse 1s ease-out infinite;
+.plate:hover > .plate-info {
+  display: block;
 }
 
+.plate:hover > .plate-info > .plate-icon > svg {
+  animation: pulse .8s ease-out infinite;
+}
+
+.plate-content {
+  display: none;
+}
+
+.plate-active:hover > .plate-info {
+  display: none;
+}
+
+.plate-active > .plate-content {
+  display: block;
+  max-width: 240px;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.plate-active > .plate-info {
+  display: none;
+}
+
+.plate-active {
+  width: auto;
+  height: auto;
+}

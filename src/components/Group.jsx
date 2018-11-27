@@ -34,7 +34,8 @@ class Group extends PureComponent {
             React.Children.map(children, (child, i) =>
               React.cloneElement(child, {
                 index: i,
-                select: this.clickHandler
+                select: this.clickHandler,
+                active: this.state.activeIndex === i
               })
             )
           )
