@@ -16,30 +16,36 @@ class Plate extends PureComponent {
 
   render() {
     const { header, icon, children, active } = this.props;
-    const classname = classnames('plate', {
+    const plateClass = classnames('plate', {
       'plate-active': active === true
     });
 
     return (
       <div
-        className={classname}
+        className={plateClass}
         onClick={this.onClick}
       >
-        <div className="plate-info">
-          <span
-            className="plate-header"
-          >
-            {header}
-          </span>
-          <div
-            className="plate-icon">
-            { icon }
-          </div>
-        </div>
-        <div
-          className="plate-content">
-          { children }
-        </div>
+        { !active
+          ? (
+            <div className="plate-info">
+              <div
+                className="plate-icon">
+                { icon }
+              </div>
+              <p
+                className="plate-header"
+              >
+                {header}
+              </p>
+            </div>
+          )
+          : (
+            <div
+              className="plate-content">
+              { children }
+            </div>
+          )
+        }
       </div>
     );
   }

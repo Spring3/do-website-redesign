@@ -1,5 +1,6 @@
 @keyframes slideIn {
   0% {
+    opacity: 0;
     transform: translateX(200%);
   }
   100% {
@@ -8,16 +9,14 @@
   }
 }
 
-@keyframes fadeInFromTop {
+@keyframes slideToBottom {
   0% {
-    height: 0px;
+    opacity: 0;
+    transform: translateY(10%);
   }
-  70% {
-    opacity: .2;
-    height: initial / 2;
-  }
+
   100% {
-    height: initial;
+    transform: translateY(0%);
     opacity: 1;
   }
 }
@@ -43,3 +42,5 @@
 @keyframes fadeIn {
   100% { opacity: 1; }
 }
+
+

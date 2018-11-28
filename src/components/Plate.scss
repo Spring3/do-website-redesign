@@ -3,26 +3,26 @@
 
 .plate {
   box-shadow: 0px 0px 20px #EAEAEA;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   margin: 10px;
   padding: 10px;
   text-align: center;
   display: flex;
   flex-direction: column;  
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  position: relative;
+  transition: width .1s ease-in;
 }
 
 .plate:hover {
   cursor: pointer;
-  color: white;
   background: $color-highlight-black;
 }
 
-.plate:hover > .plate-info {
-  display: block;
+.plate:hover > .plate-info,
+.plate:hover > .plate-content {
+  color: white;
 }
 
 .plate:hover > .plate-info > .plate-icon > svg {
@@ -31,24 +31,18 @@
 
 .plate-content {
   display: none;
+  font-size: 14px;
+  color: white;
+  opacity: 0;
 }
 
-.plate-active:hover > .plate-info {
-  display: none;
+
+.plate-active {
+  width: 220px;
+  background: $color-highlight-black;
 }
 
 .plate-active > .plate-content {
   display: block;
-  max-width: 240px;
-  font-size: 14px;
-  padding: 5px;
-}
-
-.plate-active > .plate-info {
-  display: none;
-}
-
-.plate-active {
-  width: auto;
-  height: auto;
+  animation: slideToBottom .2s linear forwards .1s;
 }
