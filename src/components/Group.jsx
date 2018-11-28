@@ -16,8 +16,14 @@ class Group extends PureComponent {
   }
 
   clickHandler = (index : Number) => {
+    const { deselectable } = this.props;
+    const { activeIndex } = this.state;
+
+    const nextIndex = deselectable && activeIndex === index
+      ? undefined
+      : index;
     this.setState({
-      activeIndex: index
+      activeIndex: nextIndex
     });
   }
 
@@ -49,11 +55,13 @@ class Group extends PureComponent {
 Group.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
-  selectable: PropTypes.bool
+  selectable: PropTypes.bool,
+  deselectable: PropTypes.bool
 };
 
 Group.defaultProps = {
-  selectable: false
+  selectable: false,
+  deselectable: false
 };
 
 export default Group;

@@ -121,6 +121,7 @@ class Landing extends PureComponent {
           <Group
             className="plates-menu"
             selectable={true}
+            deselectable={true}
           >
             <Plate
               header="Personalized solution"
