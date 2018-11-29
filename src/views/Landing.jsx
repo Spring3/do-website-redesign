@@ -60,16 +60,18 @@ class Landing extends PureComponent {
   render() {
     return (
     <Fragment>
-      <Navbar key={0} className="navbar-x">
+      <Navbar className="navbar-x">
         <NavbarItem type="image" src={logo} width={150} grow={true}/>
-        <Group selectable={false}>
+        <Group
+          selectable={false}
+        >
           <NavbarItem text="Solutions" />
           <NavbarItem text="Benefits" options={BenefitsOptions} />
           <NavbarItem text="References" options={ReferencesOptions} />
           <NavbarItem text="Company" options={CompanyOptions} />
         </Group>
       </Navbar>
-      <main key={1}>
+      <main>
         <section className="showcase">
           <VideoFrame
             img={iphone6}
@@ -185,7 +187,75 @@ class Landing extends PureComponent {
             </Plate>
           </Group>
         </section>
+        <section>
+          <h1>Dial-Once Solutions</h1>
+          <div>
+            <h2>Click to Hub</h2>
+            <p>Digitize the numbers on the page and make them trigger the visual IVR by clicking on a digitized number. Either route the user to the IVR page or display it as widget.</p>
+            <button>See the Demo</button>
+          </div>
+          <div>
+            <h2>SMS to Hub</h2>
+            <p>Provide the users with the option to request the SMS when they call your IVR. Get access to the visual IVR using the content of hte SMS.</p>
+          </div>
+          <div>
+            <h2>Call to Hub</h2>
+            <p>Intercept the call and trigger the visual IVR instead.</p>
+          </div>
+          <div>
+            <h2>Context transfer</h2>
+            <p>Send user metadata to your support center to provide basic info about who and why is calling.</p>
+          </div>
+          <div>
+            <h2>Offline mode</h2>
+            <p>Access the visual IVR in offline.</p>
+          </div>
+          <div>
+            <h2>My Hub</h2>
+            <p>Let you caller trigger the visual IVR if you are in busy/sleep mode.</p>
+          </div>
+        </section>
+        <section>
+          <h1>Feedback</h1>
+          <ul>
+            <li>
+              <p>The customer Care function has to field over 50 million inbound customer care calls every year. We serve everyone in France and wanted to show our customers that we are the most innovative postal service in Europe today. Dial-once are at the forefront of eCare and when we asked, they delivered.</p>
+              <div>
+                <span>Raphaël Colas, La Poste</span>
+              </div>
+            </li>
+            <li>
+              <p>We are convinced that this solution improves customer experience on historical telephony channel, even if it is growing fast due to extended or illimited offers in telecommunications. Congrats for this innovation!</p>
+              <div>
+                <span>Joanny Husson , Norauto</span>
+              </div>
+            </li>
+            <li>
+              <p>Dial Once is the digital solution missing in the link between digital eco-system and calls. Their approach is unique: they are 100% focused on the customer and that is why we decided to integrate Dial Once in our offers.</p>
+              <div>
+                <span>Dorothée Dalaine, The Social Client / Acticall-SITEL</span>
+              </div>
+            </li>
+            <li>
+              <p>Effective is the word that comes to my mind when I think of the Dial Once project. Always available, they accompanied us in the implementation of the solution by taking into account our specificities. Strength of proposals, they knew how to make us benefit during the project phase from their last technological evolutions. They were proactive and agile throughout the project.</p>
+              <div>
+                <span>Luc Rondot, Crédit Foncier</span>
+              </div>
+            </li>
+            <li>
+              <p>Dial Once provides an unique solution which helps City Hall of Paris to handle inbound calls. Behind their innovative solution, Dial Once is also strong by its capacity to provide consulting approach, which is very useful during the project.</p>
+              <div>
+                <span>Richard Le François, Mairie de Paris</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1>Our customers</h1>
+        </section>
       </main>
+      <footer>
+      </footer>
     </Fragment>
     );
   }
