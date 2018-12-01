@@ -189,33 +189,103 @@ class Landing extends PureComponent {
         </section>
         <section>
           <h1>Dial-Once Solutions</h1>
-          <div>
-            <h2>Click to Hub</h2>
-            <p>Digitize the numbers on the page and make them trigger the visual IVR by clicking on a digitized number. Either route the user to the IVR page or display it as widget.</p>
-            <button>See the Demo</button>
-          </div>
-          <div>
-            <h2>SMS to Hub</h2>
-            <p>Provide the users with the option to request the SMS when they call your IVR. Get access to the visual IVR using the content of hte SMS.</p>
-          </div>
-          <div>
-            <h2>Call to Hub</h2>
-            <p>Intercept the call and trigger the visual IVR instead.</p>
-          </div>
-          <div>
-            <h2>Context transfer</h2>
-            <p>Send user metadata to your support center to provide basic info about who and why is calling.</p>
-          </div>
-          <div>
-            <h2>Offline mode</h2>
-            <p>Access the visual IVR in offline.</p>
-          </div>
-          <div>
-            <h2>My Hub</h2>
-            <p>Let you caller trigger the visual IVR if you are in busy/sleep mode.</p>
+          <div className="solutions">
+            <figure className="solution">
+              <div className="media">
+                <Video
+                  src='click2hub.mp4'
+                  autoplay={true}
+                  loop={true}
+                  preload='auto'
+                  width={400}
+                />
+              </div>
+              <div className="solution-info">
+                <h1>Click to Hub</h1>
+                <figcaption className="caption">Configure items on the page to trigger the visual IVR</figcaption>
+                <ul className="benefits">
+                  <li>Remote implicit configuration.</li>
+                  <li>24/7 access</li>
+                  <li>Reduced amount of calls</li>
+                  <li>User self-service</li>
+                  <li>User satisfaction measurement</li>
+                </ul>
+              </div>
+            </figure>
+            <figure className="solution">
+              <div className="media">
+                <img
+                  src='sms2hub.png'
+                  rel='sms-to-hub-example'
+                  width={300}
+                />
+              </div>
+              <div className="solution-info">
+                <h1>SMS to Hub</h1>
+                <figcaption className="caption">Trigger the visual IVR from SMS</figcaption>
+                <ul className="benefits">
+                  <li>No delays or waiting time</li>
+                  <li>24/7 access</li>
+                  <li>Less amount of calls to your customer support</li>
+                  <li>User self-service</li>
+                </ul>
+              </div>
+            </figure>
+            <figure className="solution">
+              <div className="media">
+                <img
+                  src='click2hub.mp4'
+                  rel='call-to-hub-example'
+                  width={300}
+                />
+              </div>
+              <div className="solution-info">
+                <h1>Call to Hub</h1>
+                <figcaption className="caption">Intercept the call and trigger the visual IVR instead.</figcaption>
+                <ul className="benefits">
+                  <li>Reduce the amount of sessions with your customer support</li>
+                  <li>User self-service</li>
+                  <li>User satisfaction measurement</li>
+                </ul>
+              </div>
+            </figure>
+            <figure className="solution">
+              <div className="solution-info">
+                <h1>Offline mode</h1>
+                <figcaption className="caption">Get access to the visual IVR while offline.</figcaption>
+                <ul>
+                  <li>Unlimited access</li>
+                  <li>Fast synchronization once online</li>
+                  <li>Reduced amount of calls</li>
+                  <li>User self-service</li>
+                </ul>
+              </div>
+            </figure>
+            <figure className="solution">
+              <div className="solution-info">
+                <h1>Context transfer</h1>
+                <figcaption className="caption">Send user metadata to your support center to provide basic info about the call.</figcaption>
+                <ul className="benefits">
+                  <li>More accurate customer case review</li>
+                  <li>Reduced call time</li>
+                  <li>Increased users / hour rate</li>
+                  <li>Better quality of user service</li>
+                </ul>
+              </div>
+            </figure>
+            <figure className="solution">
+              <div className="solution-info">
+                <h1>My Hub</h1>
+                <figcaption className="caption">Let you caller trigger the visual IVR if you are in busy / sleep mode.</figcaption>
+                <ul>
+                  <li>User self-service</li>
+                  <li>Reduced amount of calls</li>
+                </ul>
+              </div>
+            </figure>
           </div>
         </section>
-        <section>
+        <section className="feedback">
           <h1>Feedback</h1>
           <ul>
             <li>

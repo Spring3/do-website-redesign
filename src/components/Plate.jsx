@@ -8,7 +8,6 @@ class Plate extends PureComponent {
 
   onClick = () => {
     const { select, index } = this.props;
-    console.log('Clicked ', index);
     if (select) {
       select(index);
     }
