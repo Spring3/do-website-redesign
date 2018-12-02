@@ -8,10 +8,11 @@ import dashboardKpis from '../img/dashboard-kpis.png';
 import Navbar from '../components/Navbar';
 import NavbarItem from '../components/NavbarItem';
 import Group from '../components/Group';
-import VideoFrame from '../components/VideoFrame';
+import IPhoneFrame from '../components/IPhoneFrame';
 import Video from '../components/Video';
 import Slider from '../components/Slider';
 import Slide from '../components/Slide';
+import ImageSlide from '../components/ImageSlide';
 import Plate from '../components/Plate';
 
 import AndroidIcon from 'mdi-react/AndroidIcon';
@@ -73,16 +74,14 @@ class Landing extends PureComponent {
       </Navbar>
       <main>
         <section className="showcase">
-          <VideoFrame
-            img={iphone6}
-          >
+          <IPhoneFrame>
             <Video
               src='do-demo.mp4'
               autoplay={true}
               loop={true}
               preload='auto'
             />
-          </VideoFrame>
+          </IPhoneFrame>
           <Slider>
             <Slide
               header="Visual IVR"
@@ -192,18 +191,30 @@ class Landing extends PureComponent {
           <div className="solutions">
             <figure className="solution">
               <div className="media">
-                <Video
-                  src='click2hub.mp4'
-                  autoplay={true}
-                  loop={true}
-                  preload='auto'
-                  width={400}
-                />
+                <Slider manual={true}>
+                  <ImageSlide>
+                    <IPhoneFrame>
+                      <img
+                        src='click2hub1.png'
+                        rel='click2hub'
+                      />
+                    </IPhoneFrame>
+                  </ImageSlide>
+                  <ImageSlide>
+                    <IPhoneFrame>
+                      <img
+                        src='click2hub.png'
+                        rel='click2hub'
+                      />
+                    </IPhoneFrame>
+                  </ImageSlide>
+                </Slider>
               </div>
               <div className="solution-info">
                 <h1>Click to Hub</h1>
                 <figcaption className="caption">Configure items on the page to trigger the visual IVR</figcaption>
                 <ul className="benefits">
+                  <li>Widget-like view</li>
                   <li>Remote implicit configuration.</li>
                   <li>24/7 access</li>
                   <li>Reduced amount of calls</li>
@@ -214,11 +225,12 @@ class Landing extends PureComponent {
             </figure>
             <figure className="solution">
               <div className="media">
-                <img
-                  src='sms2hub.png'
-                  rel='sms-to-hub-example'
-                  width={300}
-                />
+                <IPhoneFrame>
+                  <img
+                    src='sms2hub.png'
+                    rel='sms-to-hub-example'
+                  />
+                </IPhoneFrame>
               </div>
               <div className="solution-info">
                 <h1>SMS to Hub</h1>
@@ -233,11 +245,12 @@ class Landing extends PureComponent {
             </figure>
             <figure className="solution">
               <div className="media">
-                <img
-                  src='click2hub.mp4'
-                  rel='call-to-hub-example'
-                  width={300}
-                />
+                <IPhoneFrame>
+                  <img
+                    src='click2hub.mp4'
+                    rel='call-to-hub-example'
+                  />
+                </IPhoneFrame>
               </div>
               <div className="solution-info">
                 <h1>Call to Hub</h1>

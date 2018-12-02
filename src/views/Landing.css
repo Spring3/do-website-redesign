@@ -10,14 +10,14 @@ section {
   flex-wrap: wrap;
 }
 
-.video-frame {
+.showcase > .iphone-frame {
   min-width: 299px;
   height: 550px;
   position: relative;
   text-align: center;
 }
 
-.showcase > .video-frame > video {
+.showcase > .iphone-frame > video {
   width: 237px;
   margin-top: 64px;
 }
@@ -48,14 +48,29 @@ section > h1 {
   margin: 0;
   margin-top: 100px;
   background: #fafafa;
-  padding: 20px;
 }
 
-.solution > .media {
+.solution > .media > .slider {
+  margin: 0;
+}
+
+.solution > .media > .slider > .image-slide > .iphone-frame,
+.solution > .media > .iphone-frame {
+  min-width: 300px;
+  height: 550px;
+}
+
+.solution > .media > .slider > .image-slide > .iphone-frame > img,
+.solution > .media > .iphone-frame > img {
+  width: 235px;
+  height: 418px;
+  position: relative;
+  top: 66px;
+  left: 32px;
 }
 
 .solution > .solution-info {
-  padding-left: 20px;
+  padding: 20px;
 }
 
 .solution > .solution-info > h1 {
@@ -75,5 +90,20 @@ section > h1 {
 
 .solution > .solution-info > .benefits > li {
   margin-top: 10px;
+}
+
+.image-slide {
+  position: absolute;
+  visibility: hidden;
+  left: -100px;
+}
+
+.image-slide-active {
+  visibility: visible;
+  position: relative;
+  display: block;
+  left: 0px;
+  position: relative;
+  transition: left 1s;
 }
 
