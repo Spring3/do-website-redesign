@@ -37,73 +37,41 @@ section > h1 {
 
 .solutions {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .solution {
-  display: flex;
-  margin: 0;
-  margin-top: 100px;
-  background: #fafafa;
-}
-
-.solution > .media > .slider {
-  margin: 0;
-}
-
-.solution > .media > .slider > .image-slide > .iphone-frame,
-.solution > .media > .iphone-frame {
-  min-width: 300px;
-  height: 550px;
-}
-
-.solution > .media > .slider > .image-slide > .iphone-frame > img,
-.solution > .media > .iphone-frame > img {
-  width: 235px;
-  height: 418px;
-  position: relative;
-  top: 66px;
-  left: 32px;
-}
-
-.solution > .solution-info {
+  display: none;
   padding: 20px;
 }
 
-.solution > .solution-info > h1 {
-  font-size: 40px;
+.menu-selected {
+  display: flex;
+}
+
+.menu-selected > aside > .slider > .image-slide {
+  display: none;
+}
+
+.menu-selected > aside > .slider {
   margin: 0;
 }
 
-.solution > .solution-info > .caption {
-  margin-top: 20px;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.solution > .solution-info > .benefits {
-  margin-top: 20px;
-}
-
-.solution > .solution-info > .benefits > li {
-  margin-top: 10px;
-}
-
-.image-slide {
-  position: absolute;
-  visibility: hidden;
-  left: -100px;
-}
-
-.image-slide-active {
-  visibility: visible;
-  position: relative;
+.menu-selected > aside > .slider > .image-slide-active {
   display: block;
-  left: 0px;
+}
+
+.menu-selected > aside > .iphone-frame,
+.menu-selected > aside > .slider > .image-slide-active > .iphone-frame {
+  min-width: 300px;
+  height: 400px;
+}
+
+.menu-selected > aside > .iphone-frame > img,
+.menu-selected > aside > .slider > .image-slide-active > .iphone-frame > img {
   position: relative;
-  transition: left 1s;
+  width: 171px;
+  top: 48px;
+  left: 65px;
 }
 

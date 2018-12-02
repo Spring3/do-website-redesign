@@ -14,6 +14,7 @@ import Slider from '../components/Slider';
 import Slide from '../components/Slide';
 import ImageSlide from '../components/ImageSlide';
 import Plate from '../components/Plate';
+import Menu from '../components/Menu';
 
 import AndroidIcon from 'mdi-react/AndroidIcon';
 import AppleIosIcon from 'mdi-react/AppleIosIcon';
@@ -188,31 +189,27 @@ class Landing extends PureComponent {
         </section>
         <section>
           <h1>Dial-Once Solutions</h1>
-          <div className="solutions">
-            <figure className="solution">
-              <div className="media">
-                <Slider manual={true}>
+          <Menu
+            className="solutions"
+            options={['Click to Hub', 'SMS to Hub', 'Call to Hub', 'Offline Mode', 'Context Transfer', 'My Hub']}
+          >
+            <div className="solution">
+              <aside>
+                <Slider>
                   <ImageSlide>
                     <IPhoneFrame>
-                      <img
-                        src='click2hub1.png'
-                        rel='click2hub'
-                      />
+                      <img src="click2hub1.png" rel='click2hub'/>
                     </IPhoneFrame>
                   </ImageSlide>
                   <ImageSlide>
                     <IPhoneFrame>
-                      <img
-                        src='click2hub.png'
-                        rel='click2hub'
-                      />
+                      <img src="click2hub.png" rel='click2hub'/>
                     </IPhoneFrame>
                   </ImageSlide>
                 </Slider>
-              </div>
-              <div className="solution-info">
-                <h1>Click to Hub</h1>
-                <figcaption className="caption">Configure items on the page to trigger the visual IVR</figcaption>
+              </aside>
+              <div>
+                <p className="caption">Configure items on the page to trigger the visual IVR</p>
                 <ul className="benefits">
                   <li>Widget-like view</li>
                   <li>Remote implicit configuration.</li>
@@ -222,19 +219,15 @@ class Landing extends PureComponent {
                   <li>User satisfaction measurement</li>
                 </ul>
               </div>
-            </figure>
-            <figure className="solution">
-              <div className="media">
+            </div>
+            <div className="solution">
+              <aside>
                 <IPhoneFrame>
-                  <img
-                    src='sms2hub.png'
-                    rel='sms-to-hub-example'
-                  />
+                  <img src='sms2hub.png' rel='sms2hub'/>
                 </IPhoneFrame>
-              </div>
-              <div className="solution-info">
-                <h1>SMS to Hub</h1>
-                <figcaption className="caption">Trigger the visual IVR from SMS</figcaption>
+              </aside>
+              <div>
+                <p className="caption">Trigger the visual IVR from SMS</p>
                 <ul className="benefits">
                   <li>No delays or waiting time</li>
                   <li>24/7 access</li>
@@ -242,30 +235,34 @@ class Landing extends PureComponent {
                   <li>User self-service</li>
                 </ul>
               </div>
-            </figure>
-            <figure className="solution">
-              <div className="media">
-                <IPhoneFrame>
-                  <img
-                    src='click2hub.mp4'
-                    rel='call-to-hub-example'
-                  />
-                </IPhoneFrame>
-              </div>
-              <div className="solution-info">
-                <h1>Call to Hub</h1>
-                <figcaption className="caption">Intercept the call and trigger the visual IVR instead.</figcaption>
+            </div>
+            <div className="solution">
+              <aside>
+                <Slider>
+                  <ImageSlide>
+                    <IPhoneFrame>
+                      <img src="call2hub.png" rel='call2hub'/>
+                    </IPhoneFrame>
+                  </ImageSlide>
+                  <ImageSlide>
+                    <IPhoneFrame>
+                      <img src="click2hub.png" rel='call2hub'/>
+                    </IPhoneFrame>
+                  </ImageSlide>
+                </Slider>
+              </aside>
+              <div>
+                <p className="caption">Intercept the call and trigger the visual IVR instead.</p>
                 <ul className="benefits">
                   <li>Reduce the amount of sessions with your customer support</li>
                   <li>User self-service</li>
                   <li>User satisfaction measurement</li>
                 </ul>
               </div>
-            </figure>
-            <figure className="solution">
-              <div className="solution-info">
-                <h1>Offline mode</h1>
-                <figcaption className="caption">Get access to the visual IVR while offline.</figcaption>
+            </div>
+            <div className="solution">
+              <div>
+                <p className="caption">Get access to the visual IVR while offline.</p>
                 <ul>
                   <li>Unlimited access</li>
                   <li>Fast synchronization once online</li>
@@ -273,11 +270,10 @@ class Landing extends PureComponent {
                   <li>User self-service</li>
                 </ul>
               </div>
-            </figure>
-            <figure className="solution">
-              <div className="solution-info">
-                <h1>Context transfer</h1>
-                <figcaption className="caption">Send user metadata to your support center to provide basic info about the call.</figcaption>
+            </div>
+            <div className="solution">
+              <div>
+                <p className="caption">Send user metadata to your support center to provide basic info about the call.</p>
                 <ul className="benefits">
                   <li>More accurate customer case review</li>
                   <li>Reduced call time</li>
@@ -285,18 +281,17 @@ class Landing extends PureComponent {
                   <li>Better quality of user service</li>
                 </ul>
               </div>
-            </figure>
-            <figure className="solution">
-              <div className="solution-info">
-                <h1>My Hub</h1>
-                <figcaption className="caption">Let you caller trigger the visual IVR if you are in busy / sleep mode.</figcaption>
+            </div>
+            <div className="solution">
+              <div>
+                <p className="caption">Let you caller trigger the visual IVR if you are in busy / sleep mode.</p>
                 <ul>
                   <li>User self-service</li>
                   <li>Reduced amount of calls</li>
                 </ul>
               </div>
-            </figure>
-          </div>
+            </div>
+          </Menu>
         </section>
         <section className="feedback">
           <h1>Feedback</h1>
