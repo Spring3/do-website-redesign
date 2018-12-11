@@ -35,6 +35,7 @@ import MonitorDashboardIcon from 'mdi-react/MonitorDashboardIcon';
 import ChartBarStackedIcon from 'mdi-react/ChartBarStackedIcon';
 import AccountCardDetailsIcon from 'mdi-react/AccountCardDetailsIcon';
 import ToggleSwitchOutlineIcon from 'mdi-react/ToggleSwitchOutlineIcon';
+import WifiOffIcon from 'mdi-react/WifiOffIcon';
 
 import './Landing.css';
 
@@ -191,6 +192,7 @@ class Landing extends PureComponent {
           <h1>Dial-Once Solutions</h1>
           <Menu
             className="solutions"
+            activeIndex={0}
             options={['Click to Hub', 'SMS to Hub', 'Call to Hub', 'Offline Mode', 'Context Transfer', 'My Hub']}
           >
             <div className="solution">
@@ -198,21 +200,21 @@ class Landing extends PureComponent {
                 <Slider>
                   <ImageSlide>
                     <IPhoneFrame>
-                      <img src="click2hub1.png" rel='click2hub'/>
+                      <img src="click2hub1.png" alt='click2hub'/>
                     </IPhoneFrame>
                   </ImageSlide>
                   <ImageSlide>
                     <IPhoneFrame>
-                      <img src="click2hub.png" rel='click2hub'/>
+                      <img src="click2hub.png" alt='click2hub'/>
                     </IPhoneFrame>
                   </ImageSlide>
                 </Slider>
               </aside>
-              <div>
-                <p className="caption">Configure items on the page to trigger the visual IVR</p>
+              <div className="content">
+                <h2 className="caption">Configure items on the page to trigger the visual IVR</h2>
                 <ul className="benefits">
                   <li>Widget-like view</li>
-                  <li>Remote implicit configuration.</li>
+                  <li>Remote implicit configuration</li>
                   <li>24/7 access</li>
                   <li>Reduced amount of calls</li>
                   <li>User self-service</li>
@@ -223,11 +225,11 @@ class Landing extends PureComponent {
             <div className="solution">
               <aside>
                 <IPhoneFrame>
-                  <img src='sms2hub.png' rel='sms2hub'/>
+                  <img src='sms2hub.png' alt='sms2hub'/>
                 </IPhoneFrame>
               </aside>
-              <div>
-                <p className="caption">Trigger the visual IVR from SMS</p>
+              <div className="content">
+                <h2 className="caption">Trigger the visual IVR from SMS</h2>
                 <ul className="benefits">
                   <li>No delays or waiting time</li>
                   <li>24/7 access</li>
@@ -241,18 +243,18 @@ class Landing extends PureComponent {
                 <Slider>
                   <ImageSlide>
                     <IPhoneFrame>
-                      <img src="call2hub.png" rel='call2hub'/>
+                      <img src="call2hub.png" alt='call2hub'/>
                     </IPhoneFrame>
                   </ImageSlide>
                   <ImageSlide>
                     <IPhoneFrame>
-                      <img src="click2hub.png" rel='call2hub'/>
+                      <img src="click2hub.png" alt='call2hub'/>
                     </IPhoneFrame>
                   </ImageSlide>
                 </Slider>
               </aside>
-              <div>
-                <p className="caption">Intercept the call and trigger the visual IVR instead.</p>
+              <div className="content">
+                <h2 className="caption">Intercept the call and trigger the visual IVR instead.</h2>
                 <ul className="benefits">
                   <li>Reduce the amount of sessions with your customer support</li>
                   <li>User self-service</li>
@@ -261,8 +263,13 @@ class Landing extends PureComponent {
               </div>
             </div>
             <div className="solution">
-              <div>
-                <p className="caption">Get access to the visual IVR while offline.</p>
+              <aside>
+                <IPhoneFrame>
+                  <img src="offlineMode.png" alt="offlineMode"/>
+                </IPhoneFrame>
+              </aside>
+              <div className="content">
+                <h2 className="caption">Get access to the visual IVR while offline.</h2>
                 <ul>
                   <li>Unlimited access</li>
                   <li>Fast synchronization once online</li>
@@ -272,8 +279,8 @@ class Landing extends PureComponent {
               </div>
             </div>
             <div className="solution">
-              <div>
-                <p className="caption">Send user metadata to your support center to provide basic info about the call.</p>
+              <div className="content">
+                <h2 className="caption">Send user metadata to your support center to provide basic info about the call.</h2>
                 <ul className="benefits">
                   <li>More accurate customer case review</li>
                   <li>Reduced call time</li>
@@ -283,8 +290,8 @@ class Landing extends PureComponent {
               </div>
             </div>
             <div className="solution">
-              <div>
-                <p className="caption">Let you caller trigger the visual IVR if you are in busy / sleep mode.</p>
+              <div className="content">
+                <h2 className="caption">Let you caller trigger the visual IVR if you are in busy / sleep mode.</h2>
                 <ul>
                   <li>User self-service</li>
                   <li>Reduced amount of calls</li>

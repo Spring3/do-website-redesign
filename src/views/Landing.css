@@ -37,7 +37,8 @@ section > h1 {
 
 .solutions {
   display: flex;
-  justify-content: center;
+  width: 80%;
+  margin: 100px auto 0px auto;
 }
 
 .solution {
@@ -47,6 +48,9 @@ section > h1 {
 
 .menu-selected {
   display: flex;
+  border-radius: 3px;
+  height: 100%;
+  justify-content: center;
 }
 
 .menu-selected > aside > .slider > .image-slide {
@@ -70,8 +74,27 @@ section > h1 {
 .menu-selected > aside > .iphone-frame > img,
 .menu-selected > aside > .slider > .image-slide-active > .iphone-frame > img {
   position: relative;
-  width: 171px;
-  top: 48px;
-  left: 65px;
+  width: 172px;
+  top: 47px;
+  left: 64px;
+}
+
+.menu-selected .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-selected .content h2 {
+  margin-top: 0px;
+}
+
+.menu-selected .content ul {
+  list-style: square;
+  margin: 0;
+}
+
+.menu-selected .content ul li {
+  margin-top: 10px;
+  font-size: 20px
 }
 

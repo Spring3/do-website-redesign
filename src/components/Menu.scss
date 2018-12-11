@@ -2,27 +2,27 @@
   list-style-type: none;
   padding: 0px;
   margin: 0px;
+  flex-grow: 1;
+  background: #fafafa;
 }
 
 .menu > ul > li {
   padding: 20px;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
   transition: background .1s ease-in, color .1s ease-in;
 }
 
-.menu-options {
-  background: #fafafa;
-}
-
 .menu > ul > li:hover {
   padding: 20px;
-  box-shadow: 0px 5px 10px #EAEAEA;
-  background: black;
-  color: white;
+  background: #EAEAEA;
+  color: black;
   border-color: #333;
   cursor: pointer;
 }
 
 .menu > ul > li.selected {
+  padding: 20px;
+  background: black;
+  color: white;
 }
