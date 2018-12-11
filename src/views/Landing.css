@@ -1,5 +1,5 @@
 section {
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .showcase {
@@ -33,17 +33,18 @@ section {
 section > h1 {
   text-align: center;
   font-size: 35px;
+  margin-bottom: 100px;
 }
 
 .solutions {
   display: flex;
   width: 80%;
-  margin: 100px auto 0px auto;
+  margin: 0 auto;
 }
 
 .solution {
   display: none;
-  padding: 20px;
+  padding: 0px 20px 0px 20px;
 }
 
 .menu-selected {

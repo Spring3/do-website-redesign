@@ -178,7 +178,7 @@ class Landing extends PureComponent {
               header="Contextualized call"
               icon={<AccountCardDetailsIcon size={35}/>}
             >
-              <p>If a user can't find the answer to their problem, they can continue the call to your support center. Additionally, we will provide context metadata, that will help your support to identify the caller and faster adress your user's case.</p>
+              <p>When a user calls to your support center, we send along a context metadata, that will help your support to identify the caller and faster adress your user's case.</p>
             </Plate>
             <Plate
               header="On demand (de)activation"
@@ -192,7 +192,7 @@ class Landing extends PureComponent {
           <h1>Dial-Once Solutions</h1>
           <Menu
             className="solutions"
-            activeIndex={0}
+            selectedIndex={0}
             options={['Click to Hub', 'SMS to Hub', 'Call to Hub', 'Offline Mode', 'Context Transfer', 'My Hub']}
           >
             <div className="solution">
@@ -211,7 +211,7 @@ class Landing extends PureComponent {
                 </Slider>
               </aside>
               <div className="content">
-                <h2 className="caption">Configure items on the page to trigger the visual IVR</h2>
+                <h2 className="caption">Let items on the page to trigger the visual IVR</h2>
                 <ul className="benefits">
                   <li>Widget-like view</li>
                   <li>Remote implicit configuration</li>
@@ -300,6 +300,12 @@ class Landing extends PureComponent {
             </div>
           </Menu>
         </section>
+        <section>
+          <h1>Our Customers</h1>
+        </section>
+        <section>
+          <h1>Our Partners</h1>
+        </section>
         <section className="feedback">
           <h1>Feedback</h1>
           <ul>
@@ -334,9 +340,6 @@ class Landing extends PureComponent {
               </div>
             </li>
           </ul>
-        </section>
-        <section>
-          <h1>Our customers</h1>
         </section>
       </main>
       <footer>

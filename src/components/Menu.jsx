@@ -8,7 +8,9 @@ class Menu extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      selectedIndex: this.props.selectedIndex || -1
+      selectedIndex: typeof props.selectedIndex === 'number'
+        ? props.selectedIndex 
+        : -1
     };
   }
 
@@ -29,7 +31,7 @@ class Menu extends PureComponent {
             {
               options.map((option, i) =>
                 <li
-                  className={classnames({
+                  className={classnames('', {
                     'selected': this.state.selectedIndex === i
                   })}
                   key={i}
