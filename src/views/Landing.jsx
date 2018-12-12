@@ -301,7 +301,7 @@ class Landing extends PureComponent {
           </Menu>
         </section>
         <section>
-          <h1>Our Customers</h1>
+          <h1>Our Clients</h1>
         </section>
         <section>
           <h1>Our Partners</h1>

@@ -2,6 +2,10 @@ section {
   margin-top: 200px;
 }
 
+section:first-child {
+  margin-top: 100px;
+}
+
 .showcase {
   display: flex;
   justify-content: space-evenly;
