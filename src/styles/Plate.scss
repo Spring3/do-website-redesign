@@ -1,0 +1,53 @@
+@import './consts.scss';
+@import './animations.scss';
+
+.plate {
+  background: #FAFAFA;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;  
+  justify-content: flex-end;
+  align-items: center;
+  transition: all .1s ease-in;
+  position: relative;
+  border: 2px solid #F1F1F1;
+  border-radius: 3px;
+}
+
+.plate:hover {
+  border-width: 4px;
+  border-color: $color-main;
+}
+
+.plate-info {
+  width: 100%;
+  position: absolute;
+  top: 30px;
+}
+
+.plate:hover .plate-header {
+  color: $color-main;
+}
+
+.plate-header {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.plate:hover > .plate-info > .plate-icon > svg {
+  animation: pulse .8s ease-out infinite;
+  fill: $color-main;
+}
+
+.plate-content {
+  display: block;
+  padding: 20px 20px 10px 20px;
+  font-size: 15px;
+  opacity: 0;
+  text-align: justify;
+  animation: slideToBottom .2s linear forwards .1s;
+  border-top: 2px solid #f0f0f0;
+}

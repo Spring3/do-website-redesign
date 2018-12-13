@@ -1,0 +1,19 @@
+.clients .iconset-wrapper {
+  column-count: 9;
+}
+
+.partners .iconset-wrapper {
+  column-count: 8;
+}
+
+.iconset-wrapper {
+  text-align: center;
+}
+
+.iconset-item {
+  display: inline-block;
+}
+
+.iconset-item:hover {
+  cursor: pointer;
+}

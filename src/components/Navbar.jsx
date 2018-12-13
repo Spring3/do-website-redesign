@@ -1,7 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react';
-import './Navbar.css';
+import '../styles/Navbar.scss';
 
 import PropTypes from 'prop-types';
 import classnames from 'classnames';

@@ -25,16 +25,10 @@
   0% {
     transform: scale(1);
   }
-  40% {
-    transform: rotateZ(10deg)
-  }
-  50% {
+  30% {
     transform: scale(1.2);
   }
   60% {
-    transform: rotateZ(-10deg);
-  }
-  100% {
     transform: scale(1);
   }
 }

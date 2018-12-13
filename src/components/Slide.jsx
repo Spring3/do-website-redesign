@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-import './Slide.scss';
+import '../styles/Slide.scss';
 
 class Slide extends PureComponent {
   activate = () => {

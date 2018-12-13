@@ -27,10 +27,11 @@ section:first-child {
 }
 
 .plates-menu {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 20px;
   flex-wrap: wrap;
-  width: 80%;
+  width: 90%;
   margin: 50px auto 0px auto;
 }
 
@@ -42,6 +43,7 @@ section > h1 {
 
 .solutions {
   display: flex;
+  justify-content: center;
   width: 80%;
   margin: 0 auto;
 }
@@ -49,6 +51,10 @@ section > h1 {
 .solution {
   display: none;
   padding: 0px 20px 0px 20px;
+}
+
+.menu-options {
+  flex-grow: 1;
 }
 
 .menu-selected {

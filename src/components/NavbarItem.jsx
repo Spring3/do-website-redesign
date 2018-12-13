@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import './NavbarItem.scss';
+import '../styles/NavbarItem.scss';
 
 import NavbarItemText from './NavbarItemText.jsx';
 import NavbarItemImage from './NavbarItemImage.jsx';

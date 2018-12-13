@@ -5,6 +5,8 @@ import iphone6 from '../img/iphone_6_gold.png';
 import dashboardChart from '../img/dashboard-chart.png';
 import dashboardKpis from '../img/dashboard-kpis.png';
 
+import { clients, partners } from '../fixtures';
+
 import Navbar from '../components/Navbar';
 import NavbarItem from '../components/NavbarItem';
 import Group from '../components/Group';
@@ -15,6 +17,7 @@ import Slide from '../components/Slide';
 import ImageSlide from '../components/ImageSlide';
 import Plate from '../components/Plate';
 import Menu from '../components/Menu';
+import Iconsets from '../components/Iconset';
 
 import AndroidIcon from 'mdi-react/AndroidIcon';
 import AppleIosIcon from 'mdi-react/AppleIosIcon';
@@ -35,9 +38,8 @@ import MonitorDashboardIcon from 'mdi-react/MonitorDashboardIcon';
 import ChartBarStackedIcon from 'mdi-react/ChartBarStackedIcon';
 import AccountCardDetailsIcon from 'mdi-react/AccountCardDetailsIcon';
 import ToggleSwitchOutlineIcon from 'mdi-react/ToggleSwitchOutlineIcon';
-import WifiOffIcon from 'mdi-react/WifiOffIcon';
 
-import './Landing.css';
+import '../styles/Landing.scss';
 
 /* move it further to some separate place (store?) */
 const BenefitsOptions = [
@@ -123,66 +125,66 @@ class Landing extends PureComponent {
           <h1>What you get with Dial-Once</h1>
           <Group
             className="plates-menu"
-            selectable={true}
-            deselectable={true}
+            selectable={false}
+            deselectable={false}
           >
             <Plate
               header="Personalized solution"
-              icon={<DiamondOutlineIcon size={35}/>}
+              icon={<DiamondOutlineIcon size={40} />}
             >
               <p>Our team will make sure your new visual IVR respects your company's design choices. We will take into account all your expectations and suggestions as well as any mockups that you provide.</p>
             </Plate>
             <Plate
               header="Plug & Play"
-              icon={<ControllerClassicOutlineIcon size={35}/>}              
+              icon={<ControllerClassicOutlineIcon size={40}/>}              
             >
               <p>To start using the visual IVR solutions, connect your website or app to our api and let all the rest of it be done by our expects remotely. To stop the use, just do the opposite. It's that simple!</p>
             </Plate>
             <Plate
               header="Multi device support"
-              icon={<CellphoneLinkIcon size={35}/>}
+              icon={<CellphoneLinkIcon size={40}/>}
             >
               <p>Visual IVR is configurable on all of the popular information channels - mobile, SMS, web and even offline. We support the most popular platforms and solutions.</p>
             </Plate>
             <Plate
               header="Reduced amount of calls"
-              icon={<CoinIcon size={35}/>}
+              icon={<CoinIcon size={40}/>}
             >
               <p>Visual IVR solution is short, simple and informative. Hence, in most cases the users won't have to contact your call center. Visual IVR is a winning choice for your company.</p>
             </Plate>
             <Plate
               header="24/7 Self service"
-              icon={<AccountSearchOutlineIcon size={35}/>}
+              icon={<AccountSearchOutlineIcon size={40}/>}
             >
               <p>Your support center might have a fixed work day, while the visual IVR works all the time. It provides answers to most of the common problems while your consultants are offline.</p>
             </Plate>
             <Plate
               header="Instant user feedback"
-              icon={<AccountGroupOutlineIcon size={35}/>}
+              icon={<AccountGroupOutlineIcon size={40}/>}
             >
               <p>At the end of each session with the visual IVR, the users can provide instant feedback and rate their experience. With this data, you can analyse it and improve your services.</p>
             </Plate>
             <Plate
               header="Access to dashboard"
-              icon={<MonitorDashboardIcon size={35}/>}
+              icon={<MonitorDashboardIcon size={40}/>}
             >
               <p>Our dashboard provides metrics and kpis of real-time usage of our solutions for each information channel. Keep track of it and evaluate the effectiveness of the visual IVR.</p>
             </Plate>
             <Plate
               header="Run-time analytics"
-              icon={<ChartBarStackedIcon size={35}/>}
+              icon={<ChartBarStackedIcon size={40}/>}
             >
               <p>We route you the real-time anonymous usage data that we collect from your connected information channels.</p>
             </Plate>
             <Plate
               header="Contextualized call"
-              icon={<AccountCardDetailsIcon size={35}/>}
+              icon={<AccountCardDetailsIcon size={40}/>}
             >
               <p>When a user calls to your support center, we send along a context metadata, that will help your support to identify the caller and faster adress your user's case.</p>
             </Plate>
             <Plate
               header="On demand (de)activation"
-              icon={<ToggleSwitchOutlineIcon size={35}/>}
+              icon={<ToggleSwitchOutlineIcon size={40}/>}
             >
               <p>You can deactivate any of the installed solutions any time on any channel or platform using your dashboard access. Just switch the toggle and it's done!</p>
             </Plate>
@@ -300,11 +302,13 @@ class Landing extends PureComponent {
             </div>
           </Menu>
         </section>
-        <section>
+        <section className="clients">
           <h1>Our Clients</h1>
+          <Iconsets iconsets={clients} height={80} width={100} />
         </section>
-        <section>
+        <section className="partners">
           <h1>Our Partners</h1>
+          <Iconsets iconsets={partners} height={80} width={100} />
         </section>
         <section className="feedback">
           <h1>Feedback</h1>

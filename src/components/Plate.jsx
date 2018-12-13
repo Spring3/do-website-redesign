@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-import './Plate.scss';
+import '../styles/Plate.scss';
 
 class Plate extends PureComponent {
 
@@ -24,27 +24,21 @@ class Plate extends PureComponent {
         className={plateClass}
         onClick={this.onClick}
       >
-        { !active
-          ? (
-            <div className="plate-info">
-              <div
-                className="plate-icon">
-                { icon }
-              </div>
-              <p
-                className="plate-header"
-              >
-                {header}
-              </p>
-            </div>
-          )
-          : (
-            <div
-              className="plate-content">
-              { children }
-            </div>
-          )
-        }
+        <div className="plate-info">
+          <div
+            className="plate-icon">
+            { icon }
+          </div>
+          <p
+            className="plate-header"
+          >
+            {header}
+          </p>
+        </div>
+          <div
+            className="plate-content">
+            { children }
+          </div>
       </div>
     );
   }

@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import './Slider.css';
+import '../styles/Slider.scss';
 
 class Slider extends PureComponent {
   constructor(props) {

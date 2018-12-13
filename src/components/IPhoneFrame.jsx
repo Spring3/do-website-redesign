@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import iphone6 from '../img/iphone_6_gold.png';
 
-import './IPhoneFrame.scss';
-
 const imageStyle = {
   backgroundSize: 'contain',
   backgroundRepeat: 'no-repeat',

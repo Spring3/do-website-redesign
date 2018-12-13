@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import './NavbarItem.scss';
+import '../styles/NavbarItem.scss';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 
 class NavbarItemText extends PureComponent {

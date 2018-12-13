@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-import './Menu.scss';
+import '../styles/Menu.scss';
 
 class Menu extends PureComponent {
   constructor(props) {
